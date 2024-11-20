@@ -1,0 +1,389 @@
+<!-- 
+Website T4 - Wear World
+Metodología TSP
+
+Anderson Cardona
+Óscar Clavijo
+Martín Orduz
+Santiago Pérez
+John Vanegas
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>T4_WEAR</title>
+
+  <link rel="stylesheet" href="Inicio_Sesion.css">
+  <link rel="stylesheet" href="Busqueda_Basica.css">
+  <link rel="stylesheet" href="Articulos_Caracteristicas.css">
+  <link rel="stylesheet" href="Busqueda_Avanzada_Style.css">
+  <link rel="stylesheet" href="Compra.css">
+  <link rel="stylesheet" href="Carrito_de_Compras_Script.css">
+
+
+</head>
+
+<body>
+
+  <!-- Modulo de inicio de sesión y registro-->
+
+  <!-- Sección de barra de inicio-->
+  <header>
+    <nav class="BarraInicio">
+      <ul>
+        <li><a href="#INICIO">INICIO</a></li>
+        <li><a href="#LOGIN">LOGIN</a></li>
+        <li><a href="#REGISTRO">REGISTRO</a></li>
+        <li> <a href="#ARTICULOS">ARTICULOS</a></li>
+        <li> <a href="#BUSCAR">BUSCAR</a></li>
+        <li> <a href="#CARRITO">CARRITO DE COMPRAS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Sección de página inicio-->
+  <section ID="INICIO">
+    <h1>
+      T4 - Wear World
+    </h1>
+    <h2>The Best Style 4</h2>
+  </section>
+
+  <!-- Sección de inicio de sesión-->
+
+
+  <section id="LOGIN">
+    <h2>INICIO DE SESIÓN</h2>
+    <h3>LOGIN</h3>
+
+    <form>
+      <ul>
+        <li>
+          <label>E-mail</label>
+          <input id="E-mail" />
+        </li>
+        <li>
+          <label>Contraseña</label>
+          <input id="Contraseña" />
+        </li>
+      </ul>
+      <button>Login</button>
+
+    </form>
+  </section>
+
+  <!-- Sección de registro-->
+
+  <section id="REGISTRO">
+    <h2>Registrarse</h2>
+    <form>
+      <ul>
+        <li>
+          <label>Nombre</label>
+          <input id="Nombre" />
+        </li>
+        <li>
+          <label>E-mail</label>
+          <input id="E-mail" />
+        </li>
+        <li>
+          <label>Contraseña</label>
+          <input id="Contraseña" />
+        </li>
+        <li>
+          <label>Confirme contraseña</label>
+          <input id="ConfirmacionContraseña" />
+        </li>
+      </ul>
+    </form>
+    <button>Registrarme</button>
+
+
+    <script src="Sesion_Inicio.js"></script>
+    
+
+<!-- Módulo de búsqueda básica-->
+
+<div class="contenedor">
+    <h1>T4-Wear World</h1>
+    <input type="text" id="Barra_busqueda" placeholder="Escribe para buscar...">
+    <ul id="articulos">
+        <li>
+          <img src="Imagenes/Camiseta blanca.jpg" width="130" alt="Camiseta Blanca">
+          <span>Camiseta Blanca</span>
+        </li>
+        <li>
+          <img src="Imagenes/Camiseta azul.jpg" width="130" alt="Camiseta Azul">
+          <span>Camiseta Azul</span>
+        </li>
+        <li>
+          <img src="Imagenes/Camiseta amarilla.jpg" width="130" alt="Camiseta Amarilla">
+          <span>Camiseta Amarilla</span>
+        </li>
+        <li>
+          <img src="Imagenes/Camiseta negra.jpg" width="130" alt="Camiseta Negra">
+          <span>Camiseta Negra</span>
+        </li>
+        <li>
+          <img src="Imagenes/Camiseta rosada.jpg" width="130" alt="Camiseta Rosada">
+          <span>Camiseta Rosada</span>
+        </li>
+        <li>
+          <img src="Imagenes/Blusa amarilla.jpg" width="130" alt="Blusa Amarilla">
+          <span>Blusa Amarilla</span>
+        </li>
+        <li>
+          <img src="Imagenes/Blusa blanca.jpg" width="130" alt="Blusa Blanca">
+          <span>Blusa Blanca</span>
+        </li>
+        <li>
+          <img src="Imagenes/Blusa gris.jpg" width="130" alt="Blusa Gris">
+          <span>Blusa Gris</span>
+        </li>
+
+    </ul>
+</div>
+<script src="Busqueda_Basica.js"></script>
+
+<!-- Módulo de búsqueda avanzada-->
+
+ <!-- Barra lateral para filtros -->
+ <aside class="sidebar">
+    <h2>Filtrar productos</h2>
+    <form id="filter-form">
+        <!-- Filtrar por categoría -->
+        <label for="category">Categoría:</label>
+        <select id="category" name="category">
+            <option value="all">Todas</option>
+            <option value="blusas">Blusas</option>
+            <option value="chaquetas">Chaquetas</option>
+            <option value="pantalones">Pantalones</option>
+            <option value="faldas">Faldas</option>
+            <option value="vestidos">Vestidos</option>
+            <option value="camisetas">Camisetas</option>
+        </select>
+
+        <!-- Filtrar por rango de precios -->
+        <label for="price-range">Rango de precios:</label>
+        <select id="price-range" name="price-range">
+            <option value="all">Todos</option>
+            <option value="20-100">20,000 a 100,000</option>
+            <option value="100-250">100,001 a 250,000</option>
+            <option value="250-max">250,001 o más</option>
+        </select>
+
+        <button type="submit">Aplicar filtros</button>
+    </form>
+</aside>
+
+<!-- Contenedor principal para mostrar productos -->
+<main class="product-list">
+    <div id="products-container">
+        <!-- Los productos se generarán dinámicamente aquí -->
+    </div>
+</main>
+
+<script src="Busqueda_Avanzada_Script.js"></script>
+
+<!-- Módulo de artículos y características-->
+<div class="articulo">
+  <li>
+    <img src="Imagenes/Blusa amarilla.jpg" width="130" alt="Blusa Gris">
+    <span>Blusa amarilla</span>
+    
+  </li>
+  <li>
+    <img src="Imagenes/Blusa Azul.jpg" width="130" alt="Blusa Gris">
+    <span>Blusa manga corta azul</span>
+  </li>
+  <li>
+    <img src="Imagenes/Blusa blanca.jpg" width="130" alt="Blusa Gris">
+    <span>Blusa blanca de popelina</span>
+  </li>
+  <li>
+    <img src="Imagenes/Blusa gris.jpg" width="130" alt="Blusa Gris">
+    <span>Blusa Gris</span>
+  </li>
+  <li>
+    <img src="Imagenes/blusa.jpg" width="130" alt="Blusa Gris">
+    <span>Blusa de poliester azul claro</span>
+  </li>
+  <li>
+    <img src="Imagenes/Camisa blanca.jpeg" width="130" alt="Blusa Gris">
+    <span>Camiseta de algodón blanca</span>
+  </li>
+  <li>
+    <img src="Imagenes/Camiseta amarilla.jpg" width="130" alt="Blusa Gris">
+    <span>Camiseta de algodón amarilla</span>
+  </li>
+  <li>
+    <img src="Imagenes/Camiseta azul.jpg" width="130" alt="Blusa Gris">
+    <span>Camiseta de algodón azul</span>
+  </li>
+  <li>
+    <img src="Imagenes/Camiseta blanca.jpg" width="130" alt="Blusa Gris">
+    <span>Camiseta de algodón blanca</span>
+  </li>
+  <li>
+    <img src="Imagenes/Camiseta rosada.jpg" width="130" alt="Blusa Gris">
+    <span>Camisa tipo polo rosada</span>
+  </li>
+  <li>
+    <img src="Imagenes/chaqueta.jpg" width="130" alt="Blusa Gris">
+    <span>Chaqueta negra enguatada</span>
+  </li>
+  <li>
+    <img src="Imagenes/falda.jpg" width="130" alt="Blusa Gris">
+    <span>Falda a cuadros gris</span>
+  </li>
+  <li>
+    <img src="Imagenes/Pantalon negro.jpg" width="130" alt="Blusa Gris">
+    <span>Pantalón denim negro</span>
+  </li>
+  <li>
+    <img src="Imagenes/pantalon.jpg" width="130" alt="Blusa Gris">
+    <span>Pantalón de denim</span>
+  </li>
+  <li>
+    <img src="Imagenes/vestido.jpg" width="130" alt="Blusa Gris">
+    <span>Vestido verde</span>
+  </li>
+
+
+
+</div>
+<!-- Módulo de compra-->
+
+<!-- Imagen que actuará como botón -->
+<div class="producto" id="producto1">
+    <img src="Imagenes/Camisa blanca.jpeg" 
+         alt="Camisa blanca" 
+         title="Camisa blanca" 
+         width="474" height="541">
+    <p>Camisa Blanca</p>
+</div>
+
+<script>
+    // Selecciona el contenedor de la camisa
+    const producto = document.getElementById('producto1');
+
+    // Asigna un evento de clic para redirigir
+    producto.addEventListener('click', () => {
+        // Cambia la URL a la página con detalles de la camisa
+        window.location.href = "camisa-blanca.html";
+    });
+</script>
+<!-- Módulo de carrito de compras-->
+
+<h1>Carrito de Compras</h1>
+
+<!-- Lista de productos -->
+<div id="lista-productos">
+    <div class="producto">
+        <img src="Imagenes/camiseta.jpg" alt="Camiseta">
+        <h2>Camiseta</h2>
+        <p>Precio: $20</p>
+        <button onclick="agregarAlCarrito('Camiseta', 20)">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="Imagenes/blusa.jpg" alt="Blusa">
+        <h2>Blusa</h2>
+        <p>Precio: $25</p>
+        <button onclick="agregarAlCarrito('Blusa', 25)">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="Imagenes/chaqueta.jpg" alt="Chaqueta">
+        <h2>Chaqueta</h2>
+        <p>Precio: $50</p>
+        <button onclick="agregarAlCarrito('Chaqueta', 50)">Añadir al carrito</button>
+    </div>
+</div>
+
+<!-- Carrito de compras -->
+<h2>Tu Carrito</h2>
+<div id="carrito">
+    <ul id="lista-carrito"></ul>
+    <p id="total">Total: $0</p>
+</div>
+
+<script src="Carrito_de_Compras_Script.js"></script>
+
+<!-- Scripts-->
+ <script>
+// Datos de los productos con precios y categorías
+const products = [
+    { id: 1, name: "Blusa", category: "blusas", price: 50000, image: "imagenes/blusa.jpg" },
+    { id: 2, name: "Chaqueta", category: "chaquetas", price: 300000, image: "imagenes/chaqueta.jpg" },
+    { id: 3, name: "Pantalón", category: "pantalones", price: 140000, image: "imagenes/pantalon.jpg" },
+    { id: 4, name: "Falda", category: "faldas", price: 90000, image: "imagenes/falda.jpg" },
+    { id: 5, name: "Vestido", category: "vestidos", price: 220000, image: "imagenes/vestido.jpg" },
+    { id: 6, name: "Camiseta", category: "camisetas", price: 30000, image: "imagenes/camiseta.jpg" },
+];
+
+// Referencia al contenedor de productos
+const productsContainer = document.getElementById("products-container");
+
+// Función para renderizar productos
+function renderProducts(filteredProducts) {
+    productsContainer.innerHTML = ""; // Limpiar productos existentes
+    filteredProducts.forEach(product => {
+        const productItem = document.createElement("div");
+        productItem.className = "product-item";
+        productItem.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <p>${product.name}</p>
+            <p>$${product.price.toLocaleString()}</p>
+        `;
+        productsContainer.appendChild(productItem);
+    });
+}
+
+// Renderizar todos los productos inicialmente
+renderProducts(products);
+
+
+//CODIGO BUSADOR
+// Manejar filtros al enviar el formulario
+document.getElementById("filter-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    // Obtener valores seleccionados en los filtros
+    const selectedCategory = document.getElementById("category").value;
+    const selectedPriceRange = document.getElementById("price-range").value;
+
+    // Determinar los límites de precios según la selección
+    let minPrice = 0;
+    let maxPrice = Infinity;
+
+    if (selectedPriceRange === "20-100") {
+        minPrice = 20000;
+        maxPrice = 100000;
+    } else if (selectedPriceRange === "100-250") {
+        minPrice = 100001;
+        maxPrice = 250000;
+    } else if (selectedPriceRange === "250-max") {
+        minPrice = 250001;
+    }
+
+    // Filtrar productos basados en categoría y rango de precios
+    const filteredProducts = products.filter(product => {
+        const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
+        const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
+        return matchesCategory && matchesPrice;
+    });
+
+    // Renderizar productos filtrados
+    renderProducts(filteredProducts);
+});
+
+// FIN CODIGO BUSCADOR
+
+</script>
+
+</body>
+
+</html>

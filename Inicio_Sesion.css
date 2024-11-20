@@ -1,0 +1,154 @@
+/* Estilos generales */
+body {
+    font-family: Monserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  header .BarraInicio {
+    display: flex;
+    justify-content: center;
+  }
+  
+  header .BarraInicio ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header .BarraInicio ul li {
+    margin: 0 15px;
+  }
+  
+  header .BarraInicio ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  header .BarraInicio ul li a:hover {
+    color: #00bcd4;
+    text-decoration: underline;
+  }
+  
+  /* Sección de página inicio */
+  section#INICIO {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  section#INICIO h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  section#INICIO h2 {
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  /* Sección de inicio de sesión y registro */
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  section h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  /* Formularios */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  form ul li {
+    margin-bottom: 1rem;
+  }
+  
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #89804e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #89804e;
+  }
+  
+  /* Botón de registro */
+  section#REGISTRO button {
+    margin-top: 1rem;
+    background-color: #89804e;
+    border-radius: 4px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    header .BarraInicio ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header .BarraInicio ul li {
+      margin: 10px 0;
+    }
+  
+    form {
+      width: 90%;
+    }
+  }
+  

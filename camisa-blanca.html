@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisa Blanca</title>
+    <link rel="stylesheet" href="Compra.css"> <!-- Opcional si tienes estilos externos -->
+</head>
+<body>
+    <h1>Camisa Blanca</h1>
+    <img src="Imagenes/Camisa blanca.jpeg" alt="Camisa blanca" width="474" height="541">
+    
+    <div class="producto-info">
+        <p>Camisa blanca de algodón</p>
+        <p><strong>Precio:</strong> $25.000</p>
+    </div>
+    
+    <div class="carrito">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+        <button id="agregarCarrito">Agregar al carrito</button>
+    </div>
+
+    <div id="carritoMensaje" style="display: none; margin-top: 20px;">
+        <p>El producto ha sido agregado al carrito.</p>
+        <button id="verCarrito">Ver carrito</button>
+    </div>
+
+    <div class="comprar">
+        <button id="comprarAhora">Comprar Ahora</button>
+    </div>
+
+    <div id="metodoPago" style="display: none;">
+        <h2>Seleccione su método de pago</h2>
+        <div>
+            <input type="radio" id="tarjeta" name="metodo" value="Tarjeta">
+            <label for="tarjeta">Tarjeta (Visa, Mastercard)</label>
+        </div>
+        <div>
+            <input type="radio" id="efectivo" name="metodo" value="Efectivo">
+            <label for="efectivo">Efectivo (Efecty)</label>
+        </div>
+        <div class="total">
+            <p><strong>Total a pagar:</strong> <span id="totalAPagar">$25.000</span></p>
+        </div>
+        <button id="finalizarCompra">Finalizar Compra</button>
+    </div>
+
+    <button onclick="history.back()">Volver al catálogo</button>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="Compra.js"></script>
+</body>
+</html>
+
+
